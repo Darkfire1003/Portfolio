@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Js-ShoppingCart</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main>
+      <section
+        class="relative grid grid-cols-1 lg:grid-cols-2 mt-5 mx-auto pb-5 px-5 max-w-6xl gap-9"
+      >
+        <div
+          id="alleProdukte"
+          class="flex flex-col justify-center text-center rounded-2xl shadow-2xl"
+        >
+          <h2>Produkte</h2>
+        </div>
+        <div class="sticky top-5 self-start rounded-2xl shadow-2xl p-5">
+          <h2 class="text-xl font-bold mb-5">Einkaufswagen</h2>
+          <div id="warenkorbListe"></div>
+          <p class="mt-4 font-bold text-right" id="gesamtpreis">Gesamt: € 0</p>
+        </div>
+      </section>
+    </main>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>

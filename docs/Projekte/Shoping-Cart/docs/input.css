@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gray-600/35;
+}
+
+div {
+  @apply bg-white;
+}
+
+h2 {
+  @apply font-bold mt-4  mb-5 text-xl;
+}

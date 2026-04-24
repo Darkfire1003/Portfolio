@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <title>Michael Kuscher – Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-slate-50 text-slate-800">
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 w-full bg-white z-25 border-b border-slate-100">
+      <div
+        class="container flex items-center justify-between h-16 lg:h-20 relative"
+      >
+        <a
+          href="index.html"
+          class="text-lg font-bold tracking-tight text-slate-800"
+        >
+          Michael <span class="text-primary">Kuscher</span>
+        </a>
+
+        <button
+          onclick="burger()"
+          id="burger"
+          class="hamburger hamburger--collapse lg:hidden!"
+          type="button"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <nav
+          id="navBar"
+          class="hidden absolute top-full left-0 w-full bg-primary text-white border-b border-slate-100 lg:text-black lg:static lg:block lg:w-auto lg:border-0 lg:bg-transparent"
+        >
+          <ul
+            class="flex flex-col text-right font-semibold text-sm lg:flex-row lg:items-center lg:gap-6"
+          >
+            <li>
+              <a
+                href="#projekte"
+                class="block px-5 py-3 lg:p-0 hover:text-primary transition-colors"
+                >Projekte</a
+              >
+            </li>
+            <li>
+              <a
+                href="policy.html"
+                class="block px-5 py-3 lg:p-0 hover:text-primary transition-colors"
+                >Datenschutz</a
+              >
+            </li>
+            <li>
+              <a
+                href="Imprint.html"
+                class="block px-5 py-3 lg:p-0 hover:text-primary transition-colors"
+                >Impressum</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section
+        class="container grid justify-center gap-8 py-16 text-center lg:text-left lg:grid-cols-2 lg:items-center lg:py-24"
+      >
+        <div>
+          <p
+            class="text-primary font-semibold text-sm tracking-widest uppercase mb-3"
+          >
+            Frontend Entwickler &amp; Student
+          </p>
+          <h2
+            class="mb-5 text-4xl font-bold leading-tight lg:text-5xl text-slate-900"
+          >
+            Hallo, ich bin<br />
+            <span class="text-primary">Michael Kuscher</span>
+          </h2>
+          <p class="mb-8 text-slate-500 lg:text-lg leading-relaxed">
+            Ich lerne Frontend-Entwicklung an der Coding School Wörthersee.<br />
+            Hier findest du eine Auswahl meiner bisherigen Projekte.
+          </p>
+          <div class="flex gap-3 justify-center lg:justify-start flex-wrap">
+            <a href="#projekte" class="btn">Projekte ansehen</a>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex justify-center">
+          <div
+            class="hero-graphic w-64 h-64 rounded-2xl flex items-center justify-center"
+          >
+            <svg
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 52L32 28L40 44L48 34L60 52H20Z"
+                fill="#2563eb"
+                opacity="0.12"
+              />
+              <path
+                d="M20 52L32 28L40 44L48 34L60 52"
+                stroke="#2563eb"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                fill="none"
+              />
+              <circle cx="32" cy="28" r="3" fill="#2563eb" />
+              <circle cx="40" cy="44" r="3" fill="#2563eb" />
+              <circle cx="48" cy="34" r="3" fill="#2563eb" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projekte -->
+      <section id="projekte" class="py-16 bg-white border-y border-slate-100">
+        <div class="container">
+          <div class="text-center mb-12">
+            <p
+              class="text-primary font-semibold text-sm tracking-widest uppercase"
+            >
+              Was ich gebaut habe
+            </p>
+            <h3 class="mt-2 text-2xl font-bold text-slate-900 lg:text-3xl">
+              Meine Projekte
+            </h3>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <!-- Karte: First Challenge -->
+            <div class="card">
+              <div class="card-img-wrap">
+                <img
+                  src="assets/screenshots/challenge1.png"
+                  alt="Screenshot First Challenge"
+                  title="First Challenge"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="img-placeholder">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18M9 21V9" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="tag">HTML &amp; Tailwind</span>
+                <h4 class="text-base font-bold text-slate-900 mt-1">
+                  First Challenge
+                </h4>
+                <p class="text-sm text-slate-500 flex-1 leading-relaxed">
+                  Meine erste Frontend-Challenge – Layout-Übung mit HTML und
+                  Tailwind CSS.
+                </p>
+                <div class="flex gap-2 mt-3 flex-wrap">
+                  <a
+                    href="Projekte/First-Challenge/docs/index.html"
+                    class="btn text-sm text-center flex-1"
+                    >Projekt öffnen →</a
+                  >
+                  <a
+                    href="https://gitlab.com/michael.kuscher90/first-challenge/-/tree/7a489d237c775c1c77339953146cdbdabe536548/"
+                    class="btn text-sm text-center flex-1"
+                    >Projekt auf GitLab öffnen →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Karte: Mountains -->
+            <div class="card">
+              <div class="card-img-wrap">
+                <img
+                  src="assets/screenshots/mountains.png"
+                  alt="Screenshot Mountains"
+                  title="Mountains"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="img-placeholder">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18M9 21V9" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="tag">HTML &amp; CSS</span>
+                <h4 class="text-base font-bold text-slate-900 mt-1">
+                  Mountains
+                </h4>
+                <p class="text-sm text-slate-500 flex-1 leading-relaxed">
+                  Ein visuelles Layout-Projekt mit Berglandschaft, umgesetzt mit
+                  HTML und CSS.
+                </p>
+                <div class="flex gap-2 mt-3 flex-wrap">
+                  <a
+                    href="Projekte\Mountains\index.html"
+                    class="btn text-sm text-center flex-1"
+                    >Projekt öffnen →</a
+                  >
+                  <a
+                    href="https://gitlab.com/michael.kuscher90/mountains/-/tree/12cc3f0a2e954cfb971e48dc24b4e088569e807d/"
+                    class="btn text-sm text-center flex-1"
+                    >Projekt auf GitLab öffnen →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Karte: Shopping Cart -->
+            <div class="card">
+              <div class="card-img-wrap">
+                <img
+                  src="assets/screenshots/shoppingcart.png"
+                  alt="Screenshot Shopping Cart"
+                  title="Shopping Cart"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="img-placeholder">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18M9 21V9" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="tag">JavaScript</span>
+                <h4 class="text-base font-bold text-slate-900 mt-1">
+                  Shopping Cart
+                </h4>
+                <p class="text-sm text-slate-500 flex-1 leading-relaxed">
+                  Ein interaktiver Warenkorb mit Vanilla JS, Tailwind CSS und
+                  localStorage.
+                </p>
+                <div class="flex gap-2 mt-3 flex-wrap">
+                  <a
+                    href="Projekte/Shoping-Cart/docs/index.html"
+                    class="btn text-sm text-center flex-1"
+                    >Projekt öffnen →</a
+                  >
+                  <a
+                    href="https://gitlab.com/michael.kuscher90/shopping-cart/-/tree/088d39d0c9cae37297b77f89bf31e0b507564954/"
+                    class="btn text-sm text-center flex-1"
+                    >Projekt auf GitLab öffnen →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Karte: Dark-Light Türsteher -->
+            <div class="card">
+              <div class="card-img-wrap">
+                <img
+                  src="assets/screenshots/darklight.png"
+                  alt="Screenshot Dark-Light Türsteher Namensliste"
+                  title="Dark-Light Türsteher Namensliste"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="img-placeholder">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18M9 21V9" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="tag">Dark Mode &amp; JS</span>
+                <h4 class="text-base font-bold text-slate-900 mt-1">
+                  Dark-Light Türsteher Namensliste
+                </h4>
+                <p class="text-sm text-slate-500 flex-1 leading-relaxed">
+                  Eine Namensliste mit Dark/Light-Mode-Umschalter, gebaut mit
+                  Tailwind CSS und JavaScript.
+                </p>
+                <div class="flex gap-2 mt-3 flex-wrap">
+                  <a
+                    href="Projekte\Dark-Light_Tuersteher_NamensListe\src\index.html"
+                    class="btn text-sm text-center flex-1"
+                    >Projekt öffnen →</a
+                  >
+                  <a
+                    href="https://gitlab.com/michael.kuscher90/dark-light/-/tree/b67b5b9dcb5f6f5d4c0970ecbf79b67305ff90b4/"
+                    class="btn text-sm text-center flex-1"
+                    >Projekt auf GitLab öffnen →</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-slate-300">
+      <div
+        class="container flex flex-col items-center justify-center py-8 md:flex-row md:justify-between lg:flex-row lg:justify-between gap-4"
+      >
+        <span class="font-bold text-white text-base tracking-tight">
+          Michael <span class="text-primary-light">Kuscher</span>
+        </span>
+        <span class="text-sm text-slate-500">© 2025 Michael Kuscher</span>
+        <div class="flex gap-4 text-sm">
+          <a href="policy.html" class="hover:text-white transition-colors"
+            >Datenschutz</a
+          >
+          <a href="Imprint.html" class="hover:text-white transition-colors"
+            >Impressum</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+  </body>
+</html>

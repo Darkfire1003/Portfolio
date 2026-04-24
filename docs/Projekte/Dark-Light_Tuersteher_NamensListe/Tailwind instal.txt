@@ -1,0 +1,11 @@
+Tailwind instal
+
+1)	Terminal -> New Terminal
+2)	npm init -y in Terminal eingeben
+3)	npm install tailwindcss @tailwindcss/cli in Terminal eingeben
+4)	src Folder anlegen (darin ist das Projekt)
+5)	input.css file in src anlegen
+6)	@import "tailwindcss";  -> in die input.css einfügen
+7)	npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch  in Terminal eingeben
+8)	index.html in src einfügen
+9)	output.css in index.html einfügen <link rel="stylesheet" href="output.css">
