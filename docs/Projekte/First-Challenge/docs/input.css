@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+/* burger setup  */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  transition:
+    top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    opacity 0.1s linear;
+}
+.hamburger--collapse .hamburger-inner::before {
+  transition:
+    top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition:
+    top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    opacity 0.1s 0.22s linear;
+}
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition:
+    top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* Hamburger set up ende */
+
+@theme {
+  --color-primary: #f18a04;
+  --color-secondary: #fce8cd;
+  --font-pizza: "Pizza", sans-serif;
+}
+@font-face {
+  font-family: "Pizza";
+  src: url(assets/fonts/OpenSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pizza";
+  src: url(assets/fonts/OpenSans-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* General settings */
+body {
+  @apply font-pizza;
+}
+
+body.legalPage :is(h3, h4, h5) {
+  @apply py-5 font-bold text-center;
+}
+
+button.btn:hover,
+.klick:hover {
+  @apply cursor-pointer lg:shadow-xl lg:scale-110;
+}
+
+h2 span {
+  @apply text-primary drop-shadow-sm drop-shadow-primary;
+}
+h3 {
+  @apply text-2xl font-bold uppercase;
+}
+
+.container {
+  @apply max-w-6xl px-16 py-3 mx-auto;
+}
+
+/* Hover Settings */
+
+nav ul li a {
+  @apply px-3 py-1 transition-colors duration-200 border-2 border-transparent rounded-lg;
+}
+
+nav ul li a:hover {
+  @apply text-white bg-primary;
+}
+.btn {
+  @apply px-3 py-1 text-white border-2 rounded-lg border-primary bg-primary;
+}
+.input {
+  @apply px-3 py-1 text-white border-b-2 rounded-lg border-primary bg-primary;
+}
+
+.hearts {
+  @apply flex gap-1 text-2xl text-gray-500;
+}
+.heart.aktiv,
+.heart:hover {
+  @apply text-red-600 cursor-pointer;
+}

@@ -1,0 +1,190 @@
+let RECIPES = [
+  {
+    name: "Spaghetti Carbonara",
+    description: "A classic Italian pasta dish.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1612874742237-6526221588e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Italian",
+    isFavorite: true,
+    author: "Marco Rossi",
+    cookingTime: 30,
+  },
+  {
+    name: "Chicken Tikka Masala",
+    description: "A spicy Indian curry dish.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Indian",
+    isFavorite: false,
+    author: "Anjali Patel",
+    cookingTime: 45,
+  },
+  {
+    name: "Vegetable Stir-Fry",
+    description: "A light Asian dish with mixed vegetables.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Asian",
+    isFavorite: false,
+    author: "Li Wei",
+    cookingTime: 20,
+  },
+  {
+    name: "Margherita Pizza",
+    description: "A simple Italian dish with tomatoes, mozzarella, and basil.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Italian",
+    isFavorite: true,
+    author: "Giovanni Bianchi",
+    cookingTime: 25,
+  },
+  {
+    name: "Butter Chicken",
+    description: "A popular Indian dish in a creamy tomato sauce.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Indian",
+    isFavorite: false,
+    author: "Anjali Patel",
+    cookingTime: 40,
+  },
+  {
+    name: "Sushi Rolls",
+    description: "Fresh sushi rolls with rice, fish, and vegetables.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Asian",
+    isFavorite: false,
+    author: "Yuki Tanaka",
+    cookingTime: 35,
+  },
+  {
+    name: "Beef Stroganoff",
+    description: "A classic Russian dish with beef and a creamy sauce.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1675257163553-7b47813b800d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Russian",
+    isFavorite: false,
+    author: "Ivan Petrov",
+    cookingTime: 50,
+  },
+  {
+    name: "Falafel",
+    description: "Small balls made from chickpeas and spices, fried in oil.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1593001872095-7d5b3868dd20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Appetizer",
+    dishCategory: "Vegan",
+    isFavorite: true,
+    author: "Rami Abdul",
+    cookingTime: 25,
+  },
+  {
+    name: "Paella",
+    description: "A Spanish rice dish with seafood or chicken.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1534080564583-6be75777b70a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Spanish",
+    isFavorite: false,
+    author: "Carlos Gutierrez",
+    cookingTime: 60,
+  },
+  {
+    name: "Moussaka",
+    description: "A Greek dish with eggplant, ground meat, and béchamel sauce.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Greek",
+    isFavorite: false,
+    author: "Nikos Papadopoulos",
+    cookingTime: 70,
+  },
+  {
+    name: "Tom Yum Soup",
+    description: "A spicy and sour Thai soup.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1548943487-a2e4e43b4853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Appetizer",
+    dishCategory: "Thai",
+    isFavorite: false,
+    author: "Siriwan Chai",
+    cookingTime: 25,
+  },
+  {
+    name: "Shakshuka",
+    description: "A dish of eggs poached in a tomato-pepper sauce.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1590412200988-a436970781fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Breakfast",
+    dishCategory: "Middle Eastern",
+    isFavorite: true,
+    author: "Amina Al-Farouq",
+    cookingTime: 30,
+  },
+  {
+    name: "Tacos",
+    description: "Mexican corn tortillas filled with various ingredients.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Mexican",
+    isFavorite: false,
+    author: "Juan Martinez",
+    cookingTime: 15,
+  },
+  {
+    name: "Ratatouille",
+    description:
+      "A French vegetable dish with eggplant, zucchini, and tomatoes.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1572453800999-e8d2d1589b7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "French",
+    isFavorite: false,
+    author: "Claire Dubois",
+    cookingTime: 40,
+  },
+  {
+    name: "Hummus",
+    description: "A creamy dip made from chickpeas and sesame.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1577805947697-89e18249d767?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Appetizer",
+    dishCategory: "Vegan",
+    isFavorite: false,
+    author: "Rami Abdul",
+    cookingTime: 15,
+  },
+  {
+    name: "Peking Duck",
+    description: "A Chinese dish with crispy roasted duck.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1518492104633-130d0cc84637?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Main Course",
+    dishCategory: "Chinese",
+    isFavorite: false,
+    author: "Li Wei",
+    cookingTime: 90,
+  },
+  {
+    name: "Churros",
+    description: "Spanish pastry rolls coated in sugar and cinnamon.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1624542331540-dd96d5ce5b89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80",
+    category: "Dessert",
+    dishCategory: "Spanish",
+    isFavorite: false,
+    author: "Carlos Gutierrez",
+    cookingTime: 30,
+  },
+];

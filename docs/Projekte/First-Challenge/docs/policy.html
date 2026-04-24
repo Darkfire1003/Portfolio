@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CSAW Cooking</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+
+  <body class="legalPage">
+    <!-- Logo+ Navbar -->
+    <header
+      class="container sticky top-0 flex items-center justify-between h-16 bg-white lg:h-20 mb-0-5 lg z-25"
+    >
+      <a href="index.html"
+        ><img
+          class="h-12 lg:h-16"
+          src="assets/gfx/headerLogo.svg"
+          alt="Pizzaman Logo"
+          title="Pizzaman Logo"
+      /></a>
+
+      <button
+        onclick="burger()"
+        id="burger"
+        class="hamburger hamburger--collapse lg:hidden!"
+        type="button"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <nav
+        id="navBar"
+        class="absolute left-0 flex-col hidden w-full font-bold top-16 lg:w-fit bg-secondary lg:static lg:flex lg:flex-row lg:bg-white lg:text-black"
+      >
+        <ul class="gap-8 text-right lg:flex">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="policy.html">Privacy Policy</a></li>
+          <li><a href="Imprint.html">Imprint</a></li>
+          <li>
+            <a
+              href="#"
+              onclick="
+                popUp();
+                return false;
+              "
+              >Add recipe</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="bg-primary/20">
+      <section class="py-8 bg-secondary">
+        <div class="container pb-10">
+          <h1>Datenschutzerklärung</h1>
+
+          <p class="mt-4">
+            In dieser Datenschutzerklärung informieren wir Sie, wie mit Ihren
+            Daten auf der Website „<b>CSAW Cooking</b>“ umgegangen wird. Die
+            Website dient ausschließlich zu Schul‑ und Ausbildungszwecken und
+            ist kein kommerzieller Dienst.
+          </p>
+
+          <h2>Daten, die beim Besuch der Website anfallen</h2>
+          <p>
+            Beim Zugriff auf die Website werden automatisch technische Daten
+            erfasst, wie z. B. Ihre IP‑Adresse, der verwendete Browser,
+            Betriebssystem und die Zugriffszeiten. Diese Daten werden im Rahmen
+            der technischen Funktion und Sicherheit der Seite verarbeitet und
+            sind erforderlich, damit die Seite korrekt dargestellt wird.
+          </p>
+
+          <h2>Speicherung von Rezepten im Browser</h2>
+          <p>
+            Die Kochrezept‑Anwendung speichert
+            <b>keine Daten auf einem Server</b>. Stattdessen werden alle
+            Rezepte, Kommentare und Bewertungen im <b>localStorage</b> Ihres
+            Browsers gespeichert. Das bedeutet:
+          </p>
+          <ul class="pl-6 mt-2 list-disc">
+            <li>Die Daten verbleiben auf Ihrem Gerät.</li>
+            <li>Es erfolgt keine Weitergabe an Drittanbieter.</li>
+            <li>
+              Die Daten können jederzeit gelöscht werden, indem Sie den
+              Browser‑Cache oder den lokalen Speicher löschen.
+            </li>
+          </ul>
+
+          <h2>Google Fonts</h2>
+          <p>
+            Auf der Website werden Schriftarten von Google Fonts (z. B. Open
+            Sans) verwendet. Beim Laden der Seite lädt Ihr Browser die
+            Schriftart‑Dateien von Google Fonts. Google kann dabei Informationen
+            über den Zugriff auf Ihre Seite erfassen, wie z. B. IP‑Adresse,
+            Browser‑Typ und Geräte‑Informationen.
+          </p>
+          <p class="mt-2">
+            Weitere Informationen zu Google Fonts finden Sie unter:
+            <a href="https://fonts.google.com" target="_blank">Google Fonts</a>.
+          </p>
+          <p class="mt-2">
+            Die Nutzung von Google Fonts erfolgt im berechtigten Interesse an
+            der einheitlichen Darstellung der Inhalte auf der Website. Sie dient
+            nicht der Profil‑ oder Werbe‑Verfolgung.
+          </p>
+
+          <h2>Cookies</h2>
+          <p>
+            Diese Website verwendet keine funktionellen Cookies. Es werden keine
+            personenbezogenen Daten über Cookies gespeichert oder verarbeitet.
+          </p>
+
+          <h2>Ihre Rechte als betroffene Person</h2>
+          <p>
+            Gemäß der Datenschutz‑Grundverordnung (DSGVO) haben Sie bestimmte
+            Rechte bezüglich Ihrer Daten. Dazu zählen:
+          </p>
+          <ul class="pl-6 mt-2 list-disc">
+            <li>Auskunft über die gespeicherten Daten</li>
+            <li>Änderung oder Berichtigung fehlerhafter Daten</li>
+            <li>Löschung von Daten</li>
+            <li>Einschränkung oder Widerspruch gegen die Verarbeitung</li>
+            <li>Widerruf einer Einwilligung</li>
+            <li>Datenübertragbarkeit</li>
+          </ul>
+          <p class="mt-2">
+            Wenn Sie diese Rechte geltend machen möchten, können Sie sich per
+            E‑Mail an uns wenden.
+          </p>
+
+          <h2>Kontakt</h2>
+          <p>
+            <b>Verantwortlicher für die Datenverarbeitung:</b><br />
+            Michael Kuscher<br />
+            Universitätsstraße 25, 9020 Klagenfurt am Wörthersee, Österreich
+          </p>
+          <p class="mt-2">
+            <b>Kontakt:</b><br />
+            E‑Mail:
+            <a href="mailto:m.kuscher@outlook.com">m.kuscher@outlook.com</a>
+          </p>
+
+          <h2>Änderungen dieser Datenschutzerklärung</h2>
+          <p>
+            Diese Datenschutzerklärung kann sich im Zuge technischer Anpassungen
+            oder gesetzlicher Änderungen ändern. Die aktuelle Version ist stets
+            auf dieser Seite „<b>Datenschutz</b>“ einsehbar.
+          </p>
+
+          <p class="mt-6 text-sm text-gray-500">
+            Rechtstextmuster für Datenschutzerklärungen inspiriert von
+            allgemeinen DSGVO‑Richtlinien für Webseiten.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="popUp"
+        class="fixed inset-0 z-30 flex items-center justify-center hidden w-full bg-black/40 lg:justify-items-center"
+      >
+        <div
+          class="relative max-h-[90%] flex flex-col gap-3 px-8 py-8 mt-5 font-bold bg-white lg:w-1/4 rounded-2xl"
+        >
+          <h3 class="text-center">Add Recipe</h3>
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            class="w-full p-2 bg-gray-300 rounded-t-2xl"
+          />
+          <input
+            type="text"
+            id="description"
+            placeholder="Description"
+            class="w-full p-2 bg-gray-300 h-30 text-start"
+          />
+          <input
+            type="text"
+            id="imageUrl"
+            placeholder="Image Url"
+            class="w-full p-2 bg-gray-300"
+          />
+
+          <select id="category" class="w-full p-2 bg-gray-300">
+            <option>Main Course</option>
+            <option>Dessert</option>
+            <option>Appetizer</option>
+            <option>Breakfast</option>
+          </select>
+
+          <select id="dishCategory" class="w-full p-2 bg-gray-300">
+            <option value="Italian">Italian</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Indian">Indian</option>
+            <option value="Russian">Russian</option>
+            <option value="Greek">Greek</option>
+            <option value="Thai">Thai</option>
+            <option value="Mexican">Mexican</option>
+            <option value="French">French</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Middle Eastern">Middle Eastern</option>
+          </select>
+
+          <input
+            type="text"
+            id="author"
+            placeholder="Author"
+            class="w-full p-2 bg-gray-300"
+          />
+          <input
+            type="number"
+            inputmode="numeric"
+            id="cookingTime"
+            placeholder="Cooking Time"
+            class="w-full p-2 bg-gray-300 rounded-b-2xl"
+          />
+
+          <label
+            for="isFavorite"
+            class="flex items-center justify-center gap-2 mt-2 cursor-pointer"
+          >
+            <input type="checkbox" id="isFavorite" class="hidden peer" />
+            <span
+              class="text-2xl text-gray-400 transition peer-checked:text-red-500"
+              >❤</span
+            >
+            <span>Save as Favorite</span>
+          </label>
+
+          <button type="button" class="mx-8 mt-5 btn" onclick="rezeptNeu()">
+            Add Recipe
+          </button>
+
+          <img
+            onclick="popDown()"
+            class="bg-primary h-10 w-10 rounded-full p-1.5 absolute -right-3.5 -top-3.5 klick"
+            src="assets/gfx/close.svg"
+            alt="closetag"
+            title="closetag logo"
+          />
+        </div>
+      </section>
+    </main>
+    <footer class="flex items-center justify-center bg-primary min-h-30">
+      <div
+        class="container flex flex-col items-center justify-center lg:flex-row lg:justify-between"
+      >
+        <div>
+          <a href="index.html"
+            ><img
+              class="h-15"
+              src="assets/gfx/footerLogo.svg"
+              alt="Pizzaman Logo"
+              title="Pizzaman Logo"
+          /></a>
+        </div>
+        <div class="mt-5">© Kuscher Michael</div>
+      </div>
+    </footer>
+    <script src="javascript/recipes.js"></script>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>

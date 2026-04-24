@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CSAW Cooking</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Logo+ Navbar -->
+    <header
+      class="container sticky top-0 flex items-center justify-between h-16 bg-white lg:h-20 mb-0-5 lg z-25"
+    >
+      <a href="index.html"
+        ><img
+          class="h-12 lg:h-16"
+          src="assets/gfx/headerLogo.svg"
+          alt="Pizzaman Logo"
+          title="Pizzaman Logo"
+      /></a>
+
+      <button
+        onclick="burger()"
+        id="burger"
+        class="hamburger hamburger--collapse lg:hidden!"
+        type="button"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <nav
+        id="navBar"
+        class="absolute left-0 flex-col hidden w-full font-bold top-16 lg:w-fit bg-secondary lg:static lg:flex lg:flex-row lg:bg-white lg:text-black"
+      >
+        <ul class="gap-8 text-right lg:flex">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="policy.html">Privacy Policy</a></li>
+          <li><a href="Imprint.html">Imprint</a></li>
+          <li>
+            <a
+              href="#"
+              onclick="
+                popUp();
+                return false;
+              "
+              >Add recipe</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero -->
+      <section
+        class="container grid justify-center gap-4 text-center lg:text-left lg:grid-cols-2 lg:items-center"
+      >
+        <div class="gap-4">
+          <h2 class="mb-4 text-3xl font-bold lg:text-5xl">
+            Cool like a pro <br />
+            with our <span>Easy </span>and <br />
+            <span>Tasty </span>Recipes
+          </h2>
+          <p class="mb-8 text-sm lg:text-lg">
+            This website is focused on recipes, offering inspiration and<br />
+            creativ ideas, muss like a recipe blog.
+          </p>
+          <div class="text-center lg:text-left">
+            <button type="button" class="btn" onclick="popUp()">
+              Add recipe
+            </button>
+          </div>
+        </div>
+        <img
+          class="drop-shadow-primary/50 drop-shadow-2xl"
+          src="assets/img/pizzaman.png"
+          alt="Pizzaman holding Pizza while smilling"
+          title="Pizzaman"
+        />
+      </section>
+      <!--  Favorieten -->
+      <section class="relative z-0 py-10 overflow-visible bg-primary/20 w-vhd">
+        <!-- Text -->
+        <div class="container mb-6 text-center">
+          <h3>Favorite Recipes you Can`t miss</h3>
+          <p class="my-3 mb-5 text-xs text-gray-400">
+            Most popular Recipes of the Week
+          </p>
+          <!-- Grid für Favorieten -->
+          <div
+            id="favGrid"
+            class="grid grid-cols-1 gap-10 pb-10 mt-10 md:grid-cols-2 lg:grid-cols-3 text-start"
+          ></div>
+        </div>
+      </section>
+      <!-- Alle Rezepte -->
+      <section class="container">
+        <div>
+          <p class="text-2xl font-bold">All Recipes</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-5 mt-5 text-center md:flex-row lg:flex-row"
+        >
+          <div
+            class="flex flex-col gap-1 text-center md:flex-row lg:flex-row lg:justify-start"
+          >
+            Category:
+            <select
+              class="ml-2 text-center border-2 min-w-30"
+              name="dishCategory"
+              id="land"
+            >
+              <option value="">Select All</option>
+              <option value="Italian">Italian</option>
+              <option value="Spanish">Spanish</option>
+              <option value="Vegan">Vegan</option>
+              <option value="Indian">Indian</option>
+              <option value="Russian">Russian</option>
+              <option value="Greek">Greek</option>
+              <option value="Thai">Thai</option>
+              <option value="Mexican">Mexican</option>
+              <option value="French">French</option>
+              <option value="Chinese">Chinese</option>
+              <option value="Middle Eastern">Middle Eastern</option>
+            </select>
+          </div>
+
+          <div
+            class="flex flex-col justify-center gap-1 md:flex-row lg:flex-row lg:justify-start"
+          >
+            Dish Category:
+            <select
+              class="ml-2 text-center border-2 min-w-30"
+              name="category"
+              id="meal"
+            >
+              <option value="">Select All</option>
+              <option value="Main Course">Main Course</option>
+              <option value="Appetizer">Appetizer</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Dessert">Dessert</option>
+            </select>
+          </div>
+          <button type="button" onclick="filter()" class="btn">Search</button>
+        </div>
+        <!-- Grid für Alle Rezepte -->
+        <div
+          id="allGrid"
+          class="grid grid-cols-1 gap-10 pb-10 mt-10 md:grid-cols-2 lg:grid-cols-3"
+        ></div>
+      </section>
+
+      <!-- rezeptNeu feld (Popup) -->
+      <section
+        id="popUp"
+        class="fixed inset-0 z-30 flex items-center justify-center hidden w-full pt-20 bg-black/40 lg:justify-items-center"
+      >
+        <div
+          class="relative bottom-20 flex flex-col gap-3 px-8 py-8 mt-5 font-bold bg-white lg:w-1/4 rounded-2xl"
+        >
+          <h3 class="text-center">Add Recipe</h3>
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            class="w-full p-2 bg-gray-300 rounded-t-2xl"
+          />
+          <input
+            type="text"
+            id="description"
+            placeholder="Description"
+            class="w-full p-2 bg-gray-300 h-30 text-start"
+          />
+          <input
+            type="text"
+            id="imageUrl"
+            placeholder="Image Url"
+            class="w-full p-2 bg-gray-300"
+          />
+
+          <select id="category" class="w-full p-2 bg-gray-300">
+            <option>Main Course</option>
+            <option>Dessert</option>
+            <option>Appetizer</option>
+            <option>Breakfast</option>
+          </select>
+
+          <select id="dishCategory" class="w-full p-2 bg-gray-300">
+            <option value="Italian">Italian</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Indian">Indian</option>
+            <option value="Russian">Russian</option>
+            <option value="Greek">Greek</option>
+            <option value="Thai">Thai</option>
+            <option value="Mexican">Mexican</option>
+            <option value="French">French</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Middle Eastern">Middle Eastern</option>
+          </select>
+
+          <input
+            type="text"
+            id="author"
+            placeholder="Author"
+            class="w-full p-2 bg-gray-300"
+          />
+          <input
+            type="number"
+            inputmode="numeric"
+            id="cookingTime"
+            placeholder="Cooking Time"
+            class="w-full p-2 bg-gray-300 rounded-b-2xl"
+          />
+
+          <label
+            for="isFavorite"
+            class="flex items-center justify-center gap-2 mt-2 cursor-pointer"
+          >
+            <input type="checkbox" id="isFavorite" class="hidden peer" />
+            <span
+              class="text-2xl text-gray-400 transition peer-checked:text-red-500"
+              >❤</span
+            >
+            <span>Save as Favorite</span>
+          </label>
+
+          <button type="button" class="mx-8 mt-5 btn" onclick="rezeptNeu()">
+            Add Recipe
+          </button>
+
+          <img
+            onclick="popDown()"
+            class="bg-primary h-10 w-10 rounded-full p-1.5 absolute -right-3.5 -top-3.5 klick"
+            src="assets/gfx/close.svg"
+            alt="closetag"
+            title="closetag logo"
+          />
+        </div>
+      </section>
+    </main>
+    <footer class="flex items-center justify-center bg-primary min-h-30">
+      <div
+        class="container flex flex-col items-center justify-center md:flex-row md:justify-between lg:flex-row lg:justify-between"
+      >
+        <div>
+          <a href="index.html"
+            ><img
+              class="h-15"
+              src="assets/gfx/footerLogo.svg"
+              alt="Pizzaman Logo"
+              title="Pizzaman Logo"
+          /></a>
+        </div>
+        <div class="mt-5">© Kuscher Michael</div>
+      </div>
+    </footer>
+    <script src="javascript/recipes.js"></script>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
