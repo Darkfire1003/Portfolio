@@ -1,0 +1,560 @@
+<!doctype html>
+<html
+  lang="de"
+  class="scroll-smooth"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Michael Kuscher - Portfolio</title>
+
+    <link
+      rel="stylesheet"
+      href="output.css"
+    />
+  </head>
+  <body>
+    <header
+      id="header"
+      class="sticky flex top-0 z-50 bg-bg2/95 backdrop-blur-xl border-b border-border/50"
+    >
+      <div
+        class="container flex lg:flex-row justify-between lg:justify-between items-center gap-6 py-4"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-4">
+          <a href="index.html"
+            ><img
+              src="assets/screenshots/logo.png"
+              class="w-12 h-12 rounded-xl shadow-lg ring-2 ring-accent/30"
+              alt="Michael Kuscher"
+          /></a>
+          <div>
+            <p class="text-xl font-mono font-bold text-fg">Michael</p>
+            <p
+              class="text-accent text-xl font-['Playfair_Display',serif] tracking-wide"
+            >
+              Kuscher
+            </p>
+          </div>
+        </div>
+
+        <!-- Nav -->
+        <button
+          id="burger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navBar"
+          aria-label="Navigationsmenü öffnen"
+          class="hamburger hamburger--collapse lg:hidden!"
+        >
+          <span
+            class="hamburger-box"
+            aria-hidden="true"
+          >
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <nav
+          id="navBar"
+          class="flex text-right justify-center lg:justify-end gap-2 lg:gap-4 hidden"
+          aria-labelledby="Hauptnavigation"
+        >
+          <a
+            class="navhover"
+            href="#hero"
+            >Home</a
+          >
+          <a
+            class="navhover"
+            href="#about"
+            >Über Mich</a
+          >
+          <a
+            class="navhover"
+            href="#skills"
+            >Skills</a
+          >
+          <a
+            class="navhover"
+            href="#projects"
+            >Projekte</a
+          >
+          <a
+            class="navhover"
+            href="#contact"
+            >Kontakt</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- HERO -->
+      <section
+        id="hero"
+        class="hero"
+      >
+        <div class="bgImg absolute inset-0 z-0"></div>
+
+        <div class="hero-grid absolute inset-0 pointer-events-none"></div>
+
+        <!-- Glow links -->
+        <div
+          class="absolute top-1/4 -left-32 w-96 h-96 rounded-full pointer-events-none bg-[rgba(232,129,58,0.2)] blur-[80px]"
+        ></div>
+        <!-- Glow rechts -->
+        <div
+          class="absolute bottom-1/3 right-0 w-64 h-64 rounded-full pointer-events-none bg-[rgba(212,112,45,0.1)] blur-[80px]"
+        ></div>
+
+        <div class="relative z-20 max-w-225 px-6 text-center">
+          <div
+            class="mb-8 inline-flex items-center gap-2.5 rounded-full border border-[rgba(232,129,58,.3)] bg-[rgba(232,129,58,.1)] px-4 py-2 text-[10px] font-bold uppercase tracking-[.5em] text-primary"
+          >
+            <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+            Frontend-Entwickler · Student
+          </div>
+
+          <h1
+            class="mb-10 font-light leading-[.95] tracking-[-0.03em] text-[clamp(4rem,12vw,10rem)]"
+          >
+            Michael<br />
+            <span
+              class="font-['Playfair_Display',serif] font-light tracking-[-0.03em] leading-[.95] text-gradient"
+              >Kuscher.</span
+            >
+          </h1>
+
+          <div
+            class="mb-10 bg-bg/40 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-16"
+          >
+            <p
+              class="max-w-70 text-left text-[14px] leading-[1.7] text-muted border-l-2 border-[rgba(232,129,58,.3)] pl-5"
+            >
+              Ich lerne Frontend-Entwicklung an der Coding School Wörthersee.
+              Hier findest du eine Auswahl meiner bisherigen Projekte.
+            </p>
+            <div
+              class="flex items-center gap-3 text-[12px] font-semibold uppercase tracking-[.35em] text-muted"
+            >
+              <span>8 Projekte</span>
+              <span class="w-1 h-1 rounded-full bg-muted"></span>
+              <span>Hochmotiviert</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#projects"
+              class="rounded-full bg-primary text-bg px-7 py-3.5 font-bold uppercase tracking-widest hover:bg-accent transition-all duration-200"
+            >
+              Projekte ansehen
+            </a>
+            <a
+              href="#contact"
+              class="rounded-full border border-border text-fg px-7 py-3.5 font-bold uppercase tracking-widest hover:border-primary hover:text-primary transition-all duration-300"
+            >
+              Kontakt
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT -->
+      <section
+        id="about"
+        class="container py-28 overflow-hidden mt-25"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid gap-16 lg:grid-cols-[5fr_7fr] items-center">
+            <div>
+              <div
+                class="aspect-4/5 rounded-xl overflow-hidden group relative mt-12"
+              >
+                <img
+                  class="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-110 transition-all duration-700 ease-in-out group-hover:scale-110"
+                  src="assets/screenshots/Screenshot 2026-04-24 132809.png"
+                  alt="Michael Kuscher"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-center p-5">
+              <p
+                class="flex items-center gap-3 text-[14px] font-bold uppercase tracking-[.5em] text-primary mb-4"
+              >
+                <span class="w-8 h-px bg-primary inline-block"></span>Über Mich
+                <span class="w-8 h-px bg-primary inline-block"></span>
+              </p>
+              <h2
+                class="mb-6 font-bold leading-[1.05] tracking-[-0.02em] text-[clamp(2.5rem,6vw,5rem)]"
+              >
+                Building things for the
+                <span
+                  class="font-['Playfair_Display',serif] italic text-gradient pr-2"
+                  >web that matter.</span
+                >
+              </h2>
+              <div class="leading-[1.8] text-muted space-y-5">
+                <p>
+                  Ich bin ein Bootcamp-Teilnehmer im Bereich Web Development mit
+                  einer Leidenschaft für das Bauen von Dingen im Internet. Ich
+                  habe HTML, CSS, Tailwind, JavaScript, Git und API Fetching
+                  gelernt — und dieses Wissen in 8 echte Projekte eingebracht.
+                </p>
+                <p>
+                  Ich habe noch keine Berufserfahrung, aber was ich habe, ist
+                  echte Neugier, eine starke Arbeitsmoral und den Antrieb, jeden
+                  Tag besser zu werden.
+                </p>
+                <p>
+                  Ich suche derzeit meine erste Junior-Entwicklerstelle oder ein
+                  Praktikum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills -->
+      <section
+        id="skills"
+        class="py-28 container"
+      >
+        <div class="container max-w-7xl mx-auto px-6">
+          <div class="max-w-3xl mb-16">
+            <p
+              class="flex items-center gap-3 text-[14px] font-bold uppercase tracking-[.5em] text-primary mb-4"
+            >
+              <span class="w-8 h-px bg-primary inline-block"></span>
+              Tech Stack<span class="w-8 h-px bg-primary inline-block"></span>
+            </p>
+            <h2
+              class="font-bold leading-[1.05] tracking-[-0.02em] text-[clamp(2.5rem,6vw,5rem)]"
+            >
+              Skills &amp;
+              <span class="font-display italic font-light text-gradient"
+                >Expertise.</span
+              >
+            </h2>
+            <p class="max-w-md mt-6 text-sm leading-relaxed text-muted">
+              Bootcamp‑ausgebildet und autodidaktisch gelernt. Ich beherrsche
+              die Grundlagen und baue mein Wissen jeden Tag weiter aus.
+            </p>
+          </div>
+
+          <div
+            id="skills-list"
+            class="grid gap-8 md:grid-cols-2 xl:grid-cols-3"
+          ></div>
+
+          <div class="mt-16 border-t border-border pt-8">
+            <p
+              class="text-[10px] font-bold uppercase tracking-[.5em] text-primary mb-4"
+            >
+              Tools &amp; Technologies
+            </p>
+            <div
+              class="flex flex-wrap gap-2"
+              id="tools-list"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- ─── PROJEKTE ─── -->
+      <section
+        id="projects"
+        class="container my-10"
+      >
+        <div>
+          <div>
+            <p
+              class="flex items-center gap-3 text-[14px] font-bold uppercase tracking-[.5em] text-primary mb-4"
+            >
+              <span class="w-8 h-px bg-primary inline-block"></span>
+              Meine Projekte<span
+                class="w-8 h-px bg-primary inline-block"
+              ></span>
+            </p>
+
+            <h2
+              class="mt-10 font-bold leading-[1.05] tracking-[-0.02em] text-[clamp(2.5rem,6vw,5rem)]"
+            >
+              Meine
+              <span class="font-display italic font-light text-gradient"
+                >Projekte.</span
+              >
+            </h2>
+          </div>
+        </div>
+        <div
+          id="carousel"
+          class="gallery p-14"
+        ></div>
+      </section>
+      <div
+        id="project-modal"
+        class="modal hidden"
+      >
+        <div class="modal__overlay"></div>
+
+        <div class="modal__box modal-card">
+          <button
+            id="modal-close"
+            class="modal__close"
+          >
+            &times;
+          </button>
+
+          <div class="modal-card__media">
+            <img
+              id="modal-image"
+              src=""
+              alt=""
+              class="modal-card__img"
+            />
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <h2
+                id="modal-title"
+                class="modal__title"
+              ></h2>
+              <span
+                id="modal-year"
+                class="text-sm text-muted"
+              ></span>
+            </div>
+
+            <p
+              id="modal-text"
+              class="modal__text"
+            ></p>
+
+            <div
+              id="modal-tags"
+              class="modal__actions mb-5"
+            ></div>
+
+            <div class="flex justify-center items-center gap-3">
+              <a
+                id="modal-live"
+                class="btn btn--primary flex justify-center items-center gap-4"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="w-9 h-9"
+                  src="assets/screenshots/internet.png"
+                  alt=""
+                />Live ansehen</a
+              >
+              <a
+                id="modal-github"
+                class="btn btn--ghost flex justify-center items-center gap-4"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="w-9 h-9"
+                  src="assets/screenshots/github.png"
+                  alt=""
+                />GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ════════════════════════════
+       CONTACT
+  ════════════════════════════ -->
+      <section
+        class="py-24 bg-bg2"
+        id="contact"
+      >
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="grid gap-16 lg:grid-cols-2">
+            <!-- Info -->
+            <div>
+              <p
+                class="flex items-center gap-3 text-[14px] font-bold uppercase tracking-[.5em] text-primary mb-4"
+              >
+                <span class="w-8 h-px bg-primary inline-block"></span>
+                Kontakt<span class="w-8 h-px bg-primary inline-block"></span>
+              </p>
+              <h2
+                class="mt-10 font-bold leading-[1.05] tracking-[-0.02em] text-5xl mb-5"
+              >
+                Lass und
+                <span class="font-display italic font-light text-gradient"
+                  >Zusammenarbeiten.</span
+                >
+              </h2>
+              <p class="text-sm leading-relaxed text-muted mb-8">
+                Ich bin offen für Junior-Stellen, Praktika und
+                Freelance-Projekte. Meld dich gerne!
+              </p>
+              <div class="flex flex-col gap-5">
+                <a
+                  href="mailto:M.Kuscher.dev@outlook.com"
+                  class="contact-link"
+                >
+                  <img
+                    class="w-9 h-9"
+                    src="assets/screenshots/email.png"
+                    alt=""
+                  />
+                  M.Kuscher.dev@outlook.com
+                </a>
+
+                <a
+                  href="https://github.com/Darkfire1003"
+                  target="_blank"
+                  rel="noopener"
+                  class="contact-link"
+                >
+                  <img
+                    class="w-9 h-9"
+                    src="assets/screenshots/github.png"
+                    alt=""
+                  />github.com/Darkfire1003
+                </a>
+              </div>
+            </div>
+
+            <!-- Formular -->
+
+            <div
+              id="contact-right"
+              class="flex flex-col justify-center items-center"
+            >
+              <p
+                class="flex items-center gap-3 text-[14px] font-bold uppercase tracking-[.5em] text-primary mb-4"
+              >
+                <span class="w-8 h-px bg-primary inline-block"></span>
+                Kontaktformular<span
+                  class="w-8 h-px bg-primary inline-block"
+                ></span>
+              </p>
+
+              <form
+                id="contact-form"
+                action="https://formspree.io/f/xqenrljk"
+                method="POST"
+                class="w-full"
+              >
+                <div class="mb-4">
+                  <label
+                    class="form-label"
+                    for="inp-name"
+                  >
+                    Name
+                  </label>
+                  <input
+                    id="inp-name"
+                    name="name"
+                    type="text"
+                    placeholder="Dein Name"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="form-label"
+                    for="inp-email"
+                  >
+                    E-Mail
+                  </label>
+                  <input
+                    id="inp-email"
+                    name="_replyto"
+                    type="email"
+                    placeholder="deine@mail.com"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    class="form-label"
+                    for="inp-msg"
+                  >
+                    Nachricht
+                  </label>
+                  <textarea
+                    id="inp-msg"
+                    name="message"
+                    rows="5"
+                    placeholder="Was möchtest du mir sagen?"
+                    class="form-input resize-y"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  id="form-submit"
+                  type="submit"
+                  class="btn w-full border border-accent bg-accent cursor-pointer"
+                >
+                  Nachricht senden
+                </button>
+              </form>
+
+              <div
+                id="form-success"
+                class="hidden text-center py-16"
+              >
+                <p class="text-4xl mb-4">🎉</p>
+                <h3 class="text-2xl font-bold mb-2">Danke!</h3>
+                <p class="text-muted">
+                  Ich melde mich so schnell wie möglich bei dir.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════
+       FOOTER
+  ════════════════════════════ -->
+      <footer
+        class="container flex flex-col md:flex-row items-center justify-between gap-4 px-6 py-8 border-t border-border"
+      >
+        <p class="text-sm text-muted">© 2026 Michael Kuscher</p>
+        <div class="flex justify-center items-center gap-3">
+          <img
+            class="w-12"
+            src="assets/screenshots/logo.png"
+            alt=""
+          />
+          <p class="text-xl font-mono font-bold text-fg">Michael</p>
+          <p
+            class="text-accent text-xl font-['Playfair_Display',serif] tracking-wide"
+          >
+            Kuscher
+          </p>
+        </div>
+        <div>
+          <a
+            class="text-sm text-muted hover:text-accent"
+            href="impressum.html"
+            >Impressum</a
+          >
+          <a
+            class="text-sm text-muted hover:text-accent"
+            href="privacy.html"
+            >Datenschutz</a
+          >
+        </div>
+      </footer>
+    </main>
+    <script src="javascript/project.js"></script>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
