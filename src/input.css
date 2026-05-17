@@ -186,7 +186,7 @@
 }
 /* Hamburger set up ende */
 
-/* scroll-smooth wird via Tailwind-Klasse auf <html> gesetzt */
+
 
 section[id] {
   scroll-margin-top: 120px;
