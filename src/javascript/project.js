@@ -112,7 +112,7 @@ const projectsData = [
     description:
       "Moderne Wetter-App mit Forecast, Verlauf, Top 5 Suche und Strapi Backend.",
     longDescription:
-      "Eine moderne Wetter-App mit Live-Wetterdaten über die WeatherAPI. Nutzer erhalten aktuelle Wetterdaten, 3-Tage Forecasts und astronomische Informationen wie Sonnenaufgang und Mondphase. Zusätzlich habe ich Suchverlauf, Top-5 Städte, localStorage und ein Strapi Backend zur Speicherung der Wetterdaten umgesetzt.",
+      "Die Wetter-App zeigt Live-Daten, 3-Tage-Forecasts und astronomische Informationen wie Sonnenaufgang und Mondphase. Außerdem enthält sie Suchverlauf, Top-5-Städte, Local Storage und ein Strapi-Backend.",
     tags: ["JavaScript", "API Fetch", "Strapi"],
     year: "2026",
     image: "/assets/screenshots/weatherApp.png",
