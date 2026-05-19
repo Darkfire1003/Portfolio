@@ -99,7 +99,7 @@ const projectsData = [
     description: "Disney-Charaktere mit Pagination.",
     longDescription:
       "Charakterübersicht mit der Disney API. Mein erstes Projekt mit Pagination — die Daten werden seitenweise geladen. Ich habe gelernt wie man Pagination-Logik in Vanilla JS baut.",
-    tags: ["JavaScript", "Tailwind CSS", "API Fetch", "Pagination"],
+    tags: ["JavaScript", "API Fetch", "Pagination"],
     year: "2026",
     image: "assets/screenshots/disney.png",
     link: "https://darkfire1003.github.io/Disney/src",
@@ -113,14 +113,7 @@ const projectsData = [
       "Moderne Wetter-App mit Forecast, Verlauf, Top 5 Suche und Strapi Backend.",
     longDescription:
       "Eine moderne Wetter-App mit Live-Wetterdaten über die WeatherAPI. Nutzer erhalten aktuelle Wetterdaten, 3-Tage Forecasts und astronomische Informationen wie Sonnenaufgang und Mondphase. Zusätzlich habe ich Suchverlauf, Top-5 Städte, localStorage und ein Strapi Backend zur Speicherung der Wetterdaten umgesetzt.",
-    tags: [
-      "JavaScript",
-      "Tailwind CSS",
-      "Weather API",
-      "Strapi",
-      "LocalStorage",
-      "Responsive Design",
-    ],
+    tags: ["JavaScript", "API Fetch", "Strapi"],
     year: "2026",
     image: "/assets/screenshots/weatherApp.png",
 

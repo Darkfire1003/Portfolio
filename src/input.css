@@ -278,11 +278,22 @@ body {
 .modal__box.modal-card {
   position: relative;
   width: min(100%, 48rem);
+  max-height: 92svh;
   background: rgba(26, 26, 26, 0.96);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+.modal-card__media {
+  flex: 0 0 auto;
+  @apply h-56 overflow-hidden bg-card;
+}
+
+.modal-card__content {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0;
 }
 
 .modal-card__media {
@@ -295,7 +306,7 @@ body {
 
 .modal__close {
   @apply absolute top-4 right-4 w-8 h-8 flex items-center justify-center
-         text-xl text-muted bg-transparent border-none rounded-full
+         text-xl text-white bg-accent border rounded-full
          cursor-pointer transition-all duration-200;
 }
 
@@ -304,15 +315,15 @@ body {
 }
 
 .modal__title {
-  @apply text-xl font-semibold text-accent mb-1 tracking-tight;
+  @apply text-xs  text-accent mb-1 tracking-tight;
 }
 
 .modal__text {
-  @apply text-xl leading-7 text-white/65 mb-5;
+  @apply text-sm font-normal leading-6 text-white/65 mb-5;
 }
 
 .modal__actions {
-  @apply flex  gap-2 justify-end;
+  @apply flex text-xs text-center gap-2 items-center justify-end;
 }
 
 .btn {
