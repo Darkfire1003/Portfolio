@@ -2,77 +2,60 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Datenschutzerklärung – Michael Kuscher</title>
-    <link
-      rel="stylesheet"
-      href="output.css"
-    />
+    <link rel="stylesheet" href="output.css" />
   </head>
   <body class="bg-bg text-fg">
-    <main class="container py-16">
-      <header
-        id="header"
-        class="sticky flex top-0 z-50 bg-bg2/95 backdrop-blur-xl border-b border-border/50"
+    <header
+      id="header"
+      class="sticky flex top-0 z-50 bg-bg2/95 backdrop-blur-xl border-b border-border/50"
+    >
+      <div
+        class="container flex lg:flex-row justify-between lg:justify-between items-center gap-6 py-4"
       >
-        <div
-          class="container flex lg:flex-row justify-between lg:justify-between items-center gap-6 py-4"
-        >
-          <!-- Logo -->
-          <div class="flex items-center gap-4">
-            <a href="index.html"
-              ><img
-                src="assets/screenshots/logo.png"
-                class="w-12 h-12 rounded-xl shadow-lg ring-2 ring-accent/30"
-                alt="Michael Kuscher"
-            /></a>
-            <div>
-              <p class="text-xl font-mono font-bold text-fg">Michael</p>
-              <p
-                class="text-accent text-xl font-['Playfair_Display',serif] tracking-wide"
-              >
-                Kuscher
-              </p>
-            </div>
+        <!-- Logo -->
+        <div class="flex items-center gap-4">
+          <a href="index.html"
+            ><img
+              src="assets/screenshots/logo.png"
+              class="w-12 h-12 rounded-xl shadow-lg ring-2 ring-accent/30"
+              alt="Michael Kuscher"
+          /></a>
+          <div>
+            <p class="text-xl font-mono font-bold text-fg">Michael</p>
+            <p
+              class="text-accent text-xl font-['Playfair_Display',serif] tracking-wide"
+            >
+              Kuscher
+            </p>
           </div>
-
-          <!-- Nav -->
-          <button
-            id="burger"
-            type="button"
-            aria-expanded="false"
-            aria-controls="navBar"
-            aria-label="Navigationsmenü öffnen"
-            class="hamburger hamburger--collapse lg:hidden!"
-          >
-            <span
-              class="hamburger-box"
-              aria-hidden="true"
-            >
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-          <nav
-            id="navBar"
-            class="flex text-right justify-center lg:justify-end gap-2 lg:gap-4 hidden"
-            aria-labelledby="burger"
-          >
-            <a
-              class="navhover"
-              href="index.html"
-              >Home</a
-            >
-            <a
-              class="navhover"
-              href="impressum.html"
-              >Impressum</a
-            >
-          </nav>
         </div>
-      </header>
+
+        <!-- Nav -->
+        <button
+          id="burger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navBar"
+          aria-label="Navigationsmenü öffnen"
+          class="hamburger hamburger--collapse lg:hidden!"
+        >
+          <span class="hamburger-box" aria-hidden="true">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <nav
+          id="navBar"
+          class="flex text-right justify-center lg:justify-end gap-2 lg:gap-4 hidden"
+          aria-label="Hauptnavigation"
+        >
+          <a class="navhover" href="index.html">Home</a>
+          <a class="navhover" href="impressum.html">Impressum</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container py-16">
       <h1 class="text-3xl font-bold mb-8 mt-10">Datenschutzerklärung</h1>
 
       <section class="mb-6">
@@ -88,7 +71,9 @@
           9020 Klagenfurt<br />
           Österreich<br />
           E-Mail:
-          <a href="mailto:M.Kuscher@outlook.com">M.Kuscher@outlook.com</a>
+          <a href="mailto:M.Kuscher.dev@outlook.com"
+            >M.Kuscher.dev@outlook.com</a
+          >
         </p>
       </section>
 
@@ -151,7 +136,9 @@
           Einschränkung der Verarbeitung Ihrer Daten sowie das Recht auf
           Datenübertragbarkeit. Bei Fragen oder Wünschen zur Ausübung Ihrer
           Rechte können Sie mich per E‑Mail unter
-          <a href="mailto:M.Kuscher@outlook.com">M.Kuscher@outlook.com</a>
+          <a href="mailto:M.Kuscher.dev@outlook.com"
+            >M.Kuscher.dev@outlook.com</a
+          >
           kontaktieren.
         </p>
       </section>
@@ -165,10 +152,7 @@
           Barichgasse 40–42<br />
           1030 Wien<br />
           Website:
-          <a
-            href="https://www.dsb.gv.at"
-            target="_blank"
-            rel="noopener"
+          <a href="https://www.dsb.gv.at" target="_blank" rel="noopener"
             >www.dsb.gv.at</a
           >
         </p>
@@ -191,11 +175,7 @@
     >
       <p class="text-sm text-muted">© 2026 Michael Kuscher</p>
       <div class="flex justify-center items-center gap-3">
-        <img
-          class="w-12"
-          src="assets/screenshots/logo.png"
-          alt=""
-        />
+        <img class="w-12" src="assets/screenshots/logo.png" alt="" />
         <p class="text-xl font-mono font-bold text-fg">Michael</p>
         <p
           class="text-accent text-xl font-['Playfair_Display',serif] tracking-wide"
@@ -204,17 +184,14 @@
         </p>
       </div>
       <div>
-        <a
-          class="text-sm text-muted hover:text-accent"
-          href="impressum.html"
+        <a class="text-sm text-muted hover:text-accent" href="impressum.html"
           >Impressum</a
         >
-        <a
-          class="text-sm text-muted hover:text-accent"
-          href="privacy.html"
+        <a class="text-sm text-muted hover:text-accent" href="privacy.html"
           >Datenschutz</a
         >
       </div>
     </footer>
+    <script src="javascript/script.js"></script>
   </body>
 </html>

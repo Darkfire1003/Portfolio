@@ -186,8 +186,6 @@
 }
 /* Hamburger set up ende */
 
-
-
 section[id] {
   scroll-margin-top: 120px;
 }
@@ -236,6 +234,12 @@ body {
 
 .gallery {
   @apply relative flex w-full gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth;
+
+  scrollbar-width: none;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
 }
 
 .gallery article {
@@ -282,7 +286,7 @@ body {
 }
 
 .modal-card__media {
-  @apply aspect-video overflow-hidden bg-card;
+  @apply h-56 overflow-hidden bg-card;
 }
 
 .modal-card__img {
@@ -304,7 +308,7 @@ body {
 }
 
 .modal__text {
-  @apply text-xl leading-relaxed text-white/65 mb-5;
+  @apply text-xl leading-7 text-white/65 mb-5;
 }
 
 .modal__actions {

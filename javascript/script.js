@@ -72,7 +72,7 @@ const modalTags = document.querySelector("#modal-tags");
 const modalImage = document.querySelector("#modal-image");
 const modalYear = document.querySelector("#modal-year");
 const modalLive = document.querySelector("#modal-live");
-const modalGithub = document.querySelector("#modal-github");
+const modalgitlab = document.querySelector("#modal-gitlab");
 const modalClose = document.querySelector("#modal-close");
 const modalOverlay = document.querySelector("#project-modal .modal__overlay");
 
@@ -86,7 +86,7 @@ carousel.innerHTML = projectsData
         data-long-description="${project.longDescription}"
         data-image="${project.image}"
         data-link="${project.link}"
-        data-github="${project.github}"
+        data-gitlab="${project.gitlab}"
         data-tags="${project.tags.join("|")}"
         data-year="${project.year}"
       >
@@ -112,6 +112,7 @@ carousel.innerHTML = projectsData
   .join("");
 
 document.querySelectorAll(".project-card").forEach((card) => {
+  // Modal-Click
   card.addEventListener("click", () => {
     modalTitle.textContent = card.dataset.title;
     modalText.textContent = card.dataset.longDescription;
@@ -119,7 +120,7 @@ document.querySelectorAll(".project-card").forEach((card) => {
     modalImage.src = card.dataset.image;
     modalImage.alt = card.dataset.title;
     modalLive.href = card.dataset.link;
-    modalGithub.href = card.dataset.github;
+    modalgitlab.href = card.dataset.gitlab;
 
     modalTags.innerHTML = card.dataset.tags
       .split("|")
@@ -131,14 +132,8 @@ document.querySelectorAll(".project-card").forEach((card) => {
 
     modal.classList.remove("hidden");
   });
-});
 
-modalClose.addEventListener("click", () => modal.classList.add("hidden"));
-modalOverlay.addEventListener("click", () => modal.classList.add("hidden"));
-
-let hoverTimer;
-
-document.querySelectorAll(".project-card").forEach((card) => {
+  // Hover-Scroll
   card.addEventListener("mouseenter", () => {
     clearTimeout(hoverTimer);
     hoverTimer = setTimeout(() => {
@@ -150,6 +145,11 @@ document.querySelectorAll(".project-card").forEach((card) => {
     }, 120);
   });
 });
+
+modalClose.addEventListener("click", () => modal.classList.add("hidden"));
+modalOverlay.addEventListener("click", () => modal.classList.add("hidden"));
+
+let hoverTimer;
 
 /*==========================
         Kontakformular

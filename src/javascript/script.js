@@ -81,7 +81,7 @@ carousel.innerHTML = projectsData
     (project) => `
       <article
         class="project-card group snap-center flex-none w-75 md:w-95 rounded-2xl overflow-hidden border border-border bg-[rgba(26,26,26,.75)] backdrop-blur-xl cursor-pointer shadow-[0_20px_60px_rgba(0,0,0,.35)]"
-        data-title="${project.title}"
+       data-title="${project.title}"
         data-description="${project.description}"
         data-long-description="${project.longDescription}"
         data-image="${project.image}"
@@ -90,7 +90,7 @@ carousel.innerHTML = projectsData
         data-tags="${project.tags.join("|")}"
         data-year="${project.year}"
       >
-        <div class="relative  aspect-video overflow-hidden bg-card">
+        <div class="relative   overflow-hidden bg-card">
           <h3 class=" z-10 text-xl font-bold px-4 py-3">${project.title}</h3>
           <img src="${project.image}" alt="${project.title}" class="card-img w-full h-full object-cover" />
           <div class="absolute inset-0 bg-linear-to-t from-[rgba(14,14,14,.85)] to-transparent"></div>

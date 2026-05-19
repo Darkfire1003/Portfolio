@@ -106,6 +106,28 @@ const projectsData = [
     gitlab:
       "https://gitlab.com/michael.kuscher/disney/-/tree/7f1659917bfe399f2c8c19cbf0be0a21ac0804a2/",
   },
+  {
+    id: 9,
+    title: "Weather App",
+    description:
+      "Moderne Wetter-App mit Forecast, Verlauf, Top 5 Suche und Strapi Backend.",
+    longDescription:
+      "Eine moderne Wetter-App mit Live-Wetterdaten über die WeatherAPI. Nutzer erhalten aktuelle Wetterdaten, 3-Tage Forecasts und astronomische Informationen wie Sonnenaufgang und Mondphase. Zusätzlich habe ich Suchverlauf, Top-5 Städte, localStorage und ein Strapi Backend zur Speicherung der Wetterdaten umgesetzt.",
+    tags: [
+      "JavaScript",
+      "Tailwind CSS",
+      "Weather API",
+      "Strapi",
+      "LocalStorage",
+      "Responsive Design",
+    ],
+    year: "2026",
+    image: "/assets/screenshots/weatherApp.png",
+
+    link: "https://darkfire1003.github.io/Weather-App/src",
+    gitlab: "https://gitlab.com/michael.kuscher/wetter-api",
+    featured: true,
+  },
 ];
 
 const tools = [
@@ -116,6 +138,7 @@ const tools = [
   "Figma",
   "Netlify",
   "Github Pages",
+  "LLM",
 ];
 
 const skills = [
@@ -125,4 +148,5 @@ const skills = [
   { name: "JavaScript", pct: 65 },
   { name: "API Fetch", pct: 70 },
   { name: "GSAP", pct: 65 },
+  { name: "LLM", pct: 45 },
 ];
